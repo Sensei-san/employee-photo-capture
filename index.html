@@ -625,6 +625,11 @@
         document.getElementById('btnUpload').addEventListener('click', uploadPhotos);
         document.getElementById('btnRetake').addEventListener('click', () => goToStep(1));
         document.getElementById('btnReset').addEventListener('click', resetApp);
+        
+        // Auto-convert Employee ID to uppercase as user types
+        document.getElementById('employeeId').addEventListner('input', function(e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
     </script>
 </body>
 </html>
